@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HTML Images – Assignment Starter</title>
+
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #1a1a2e, #16213e);
+        color: white;
+        text-align: center;
+        padding: 40px;
+    }
+
+    .container {
+        background: rgba(255, 255, 255, 0.06);
+        padding: 25px;
+        border-radius: 12px;
+        width: 75%;
+        margin: auto;
+        box-shadow: 0 0 18px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+        color: #E5608E;
+        margin-bottom: 10px;
+    }
+
+    .preview-area {
+        margin-top: 30px;
+        min-height: 200px;
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px dashed #E5608E;
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    button {
+        margin-top: 20px;
+        background: #E5608E;
+        padding: 10px 18px;
+        border: none;
+        border-radius: 6px;
+        color: white;
+        cursor: pointer;
+        font-size: 15px;
+        transition: 0.3s ease;
+    }
+
+    button:hover {
+        background: #ff8ca8;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <h1>Adding Images in HTML</h1>
+    <p>Complete the tasks given in your assignment by editing the HTML.</p>
+
+    <div class="preview-area" id="output">
+        <p style="opacity: 0.7;">Your added images will appear here…</p>
+    </div>
+
+    <button onclick="loadImages()">Refresh Preview</button>
+</div>
+
+<script>
+    function loadImages() {
+        const htmlContent = document.body.innerHTML;
+        document.getElementById("output").innerHTML =
+            document.getElementById("studentArea")?.innerHTML ||
+            "<p style='opacity:0.7;'>No images added yet.</p>";
+    }
+</script>
+
+<div id="studentArea" style="display:none;">
+   
+    <!-- 🔴 ADDED: First Image -->
+    <h2>My First Image</h2>
+    <img src="https://cdn.theatlantic.com/thumbor/yHhIvkBiGvKKubxVHTNXvU4nCKQ=/1x122:2554x1452/1200x625/media/img/mt/2017/06/shutterstock_319985324/original.jpg"
+         alt="My First Image"
+         width="250px">
+
+    <br><br>
+
+    <!-- 🔴 ADDED: Two Images Side by Side -->
+    <h2>Two Images Side by Side</h2>
+    <div style="display: flex; justify-content: center; gap: 20px;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt_Sb8SBSEMi6ssvRpVyqN-LrmiWPC_EU_yA&s"
+             alt="Image One"
+             width="100px">
+
+        <img src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?cs=srgb&dl=pexels-pixabay-45201.jpg&fm=jpg"
+             alt="Image Two"
+             width="100px">
+    </div>
+
+    <br><br>
+
+    <!-- 🔴 ADDED: Clickable Image -->
+    <h2>Clickable Image</h2>
+    <a href="https://example.com" target="_blank">
+        <img src="https://via.placeholder.com/200"
+             alt="Clickable Image"
+             width="100px">
+    </a>
+
+</div>
+</body>
+</html>
