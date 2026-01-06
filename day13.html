@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accessibility in HTML – Practice Playground</title>
+
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+        color: #fff;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #ffcc70;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 12px;
+        margin-top: 20px;
+    }
+
+    label {
+        display: block;
+        margin-top: 10px;
+        font-weight: 600;
+    }
+
+    input, button, select, textarea {
+        margin-top: 8px;
+        padding: 10px;
+        width: 100%;
+        border-radius: 8px;
+        border: none;
+    }
+
+    button {
+        background: #ffcc70;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    button:hover {
+        background: #ffb84d;
+    }
+
+    .demo-box {
+        background: #33334d;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+</style>
+</head>
+<body>
+
+<h1>Accessibility in HTML</h1>
+
+<div class="card">
+    <h2>Accessible Image Example</h2>
+    <div class="demo-box">
+        <img>src="https://via.placeholder.com/150" alt="placeholder">
+       
+       <img src="https://tse3.mm.bing.net/th/id/OIP.YFmJZ1hmnsbXTGc7zCaiPgHaE8?pid=Api&P=0&h=220"
+             alt="A brown cat sitting calmly on the floor">
+
+        <img src="https://images.hdqwalls.com/wallpapers/cat-4k-po.jpg"
+             alt="A close-up photo of a white cat with blue eyes">
+        
+    </div>
+</div>
+
+<div class="card">
+    <h2>Label + Input Example</h2>
+    <label for="username">Enter your name:</label>
+    <input type="text" id="username" placeholder="Type your name here">
+
+     <label for="email">Enter your email:</label>
+    <input type="email" id="email" placeholder="Type your email here">
+
+     <label for="age">Enter your age:</label>
+    <input type="number" id="age" placeholder="Type your age here">
+    <!-- TODO: Add more inputs like email or age with proper labels -->
+</div>
+
+<div class="card">
+    <h2>Button with ARIA Label</h2>
+    <button aria-label="true">Accessible Button</button>
+    
+    <!-- TODO: Add a proper ARIA label describing button purpose -->
+</div>
+
+<div class="card">
+    <h2>Navigation Example</h2>
+    <nav>
+        <a href="#" tabindex="0">Home</a> |
+        <a href="#" tabindex="0">About</a> |
+        <a href="#" tabindex="0">Contact</a>
+    </nav>
+    <!-- TODO: Ensure focus outlines are visible and navigable via keyboard -->
+</div>
+<div class="card">
+    <div class="alert" role="alert">
+        ⚠ This is an important accessibility alert message.
+    </div>
+</div>
+
+<div class="card">
+    <h2>Web Accessibility</h2>
+    <p>Accessibility makes websites usable for everyone.</p>
+     <h3>Why Accessibility Matters</h3>
+    <p>It helps people using screen readers or keyboards.</p>
+    <!-- TODO: Ensure heading hierarchy is logical (h1 → h2 → h3) -->
+</div>
+
+<div class="card">
+    <button aria-label="Open website menu">
+        Open Menu
+    </button>
+</div>
+
+
+</body>
+</html>
