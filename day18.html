@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        #commentInput {
+            width: 70%;
+            padding: 8px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 8px 16px;
+        }
+        #comments {
+            margin-top: 20px;
+            border-top: 2px solid #ccc;
+            padding-top: 20px;
+        }
+        #comments p {
+            background: #f0f0f0;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .examples {
+            background: #f8f9fa;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+        .examples code {
+            background: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="warning">
+        <strong>⚠️ Warning:</strong> This is a deliberately vulnerable application for educational purposes.
+    </div>
+
+    <h3>Comment Box (Vulnerable to XSS)</h3>
+    <input id="commentInput" placeholder="Try an XSS payload..." />
+    <button onclick="postComment()">Post</button>
+
+    <div id="comments"></div>
+
+    <div class="examples">
+        <h4>Try these XSS payloads:</h4>
+        <ul>
+            <li><code>&lt;img src=x onerror="alert('XSS')"&gt;</code></li>
+            <li><code>&lt;body onload="alert('XSS')"&gt;</code></li>
+        </ul>
+    </div>
+
+    <script>
+        function postComment() {
+            const comment = document.getElementById("commentInput").value;
+
+            // ❌ VULNERABLE: directly injecting user input into HTML
+            document.getElementById("comments").innerHTML += `<p>${comment}</p>`;
+            
+            document.getElementById("commentInput").value = "";
+        }
+    </script>
+</body>
+</html>
+        

@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Language Switch Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="toggleLang()">Switch Language</button>
+
+  <h1 id="name">Saee Vijay Bhosale</h1>
+  <p id="welcome">Welcome to my webpage!</p>
+
+  <h3 id="title">My Hobbies</h3>
+  <ul>
+    <li id="h1">Coding</li>
+    <li id="h2">Reading</li>
+    <li id="h3">Problem Solving</li>
+  </ul>
+
+  <script>
+    let english = true;
+    function toggleLang() {
+      if (english) {
+        document.getElementById("welcome").innerHTML = "माझ्या वेबसाईटवर स्वागत आहे!";
+        document.getElementById("title").innerHTML = "माझे छंद";
+        document.getElementById("h1").innerHTML = "कोडिंग";
+        document.getElementById("h2").innerHTML = "वाचन";
+        document.getElementById("h3").innerHTML = "समस्या सोडवणे";
+      } else {
+        document.getElementById("welcome").innerHTML = "Welcome to my webpage!";
+        document.getElementById("title").innerHTML = "My Hobbies";
+        document.getElementById("h1").innerHTML = "Coding";
+        document.getElementById("h2").innerHTML = "Reading";
+        document.getElementById("h3").innerHTML = "Problem Solving";
+      }
+      english = !english;
+    }
+  </script>
+
+</body>
+</html>

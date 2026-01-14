@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Saee Vijay Bhosale | Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px;
+    }
+
+    #about img {
+      width: 150px;
+      border-radius: 50%;
+      display: block;
+      margin-top: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li::before {
+      content: "✔ ";
+      color: green;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #333;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    form button {
+      padding: 10px 20px;
+      background: #2c3e50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Task 1: Header & Navigation -->
+<header>
+  <h1>Saee Vijay Bhosale</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- Task 2: About Me Section -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am a Computer Engineering student with a strong interest in web development,
+    problem solving, and learning new technologies.
+  </p>
+  <img src="profile.jpg" alt="Profile photo of Saee Vijay Bhosale">
+</section>
+
+<!-- Task 3: Skills Section -->
+<section id="skills">
+  <h2>Skills</h2>
+  <ul>
+    <li>HTML & CSS</li>
+    <li>JavaScript</li>
+    <li>React.js</li>
+    <li>Node.js</li>
+    <li>Problem Solving</li>
+  </ul>
+</section>
+
+<!-- Task 4: Projects Section -->
+<section id="projects">
+  <h2>Projects</h2>
+  <table>
+    <tr>
+      <th>Project Name</th>
+      <th>Description</th>
+      <th>Link</th>
+    </tr>
+    <tr>
+      <td>Expense Tracker</td>
+      <td>A web app to track daily expenses</td>
+      <td><a href="#" target="_blank">View</a></td>
+    </tr>
+    <tr>
+      <td>Coding Practice Platform</td>
+      <td>LeetCode-like platform for students</td>
+      <td><a href="#" target="_blank">View</a></td>
+    </tr>
+  </table>
+</section>
+
+<!-- Task 5: Contact Form -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+<!-- Task 6: Footer -->
+<footer>
+  <p>Email: saee@example.com</p>
+  <p>&copy; 2026 Saee Vijay Bhosale. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

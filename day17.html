@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Landing Page</title>
+
+    <!-- Fix #1 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .hero {
+            height: 400px;
+            background: #6d28d9;
+            color: white;
+            padding: 20px; /* Fix #4 */
+        }
+
+        .features {
+            display: flex;
+            flex-direction: column; /* Fix #3 */
+            gap: 20px;
+            padding: 20px; /* Fix #4 */
+        }
+
+        .card {
+            flex: 1;               /* Fix #2 */
+            min-width: 250px;
+            height: 200px;
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* Desktop styles */
+        @media (min-width: 768px) {
+            .features {
+                flex-direction: row;
+                padding: 40px;
+            }
+
+            .hero {
+                padding: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>Super App</h1>
+    <p>Make your life easier.</p>
+</div>
+
+<div class="features">
+    <div class="card">Feature A</div>
+    <div class="card">Feature B</div>
+    <div class="card">Feature C</div>
+</div>
+
+</body>
+</html>
