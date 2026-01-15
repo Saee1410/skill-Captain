@@ -1,13 +1,14 @@
 import React from 'react';
 import './App.css';
-import Clock from './clock.jsx';
+import Greeting from './Greeting.js';
+import Footer from './Footer.js';
 
 function App() {
   return (
     <div>
       <h1>Hello, react</h1>
-      <p>This is a JSX example.</p>
-      <Clock />
+        <Greeting name="saee" message="Welcome to the course!" />
+       <Footer />
     </div>
   );
 }
